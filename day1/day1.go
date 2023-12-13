@@ -119,9 +119,16 @@ func part2(text string) {
 	fmt.Printf("Part 2: %d\n", sum)
 } // 54194
 
-func Day1(text string) {
-	fmt.Println("Running Day 1 Part 1\n------------")
-	part1(text)
-	fmt.Println("\nRunning Day 1 Part 2\n------------")
-	part2(text)
+func Day1(text string, part int) {
+	switch part {
+	case 0:
+		part1(text)
+		part2(text)
+	case 1:
+		part1(text)
+	case 2:
+		part2(text)
+	default:
+		log.Fatalf("Part %d not found", part)
+	}
 }

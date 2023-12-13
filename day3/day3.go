@@ -264,13 +264,20 @@ func part2(text string) {
 			sum += partNum1 * partNum2
 		}
 	}
-	fmt.Printf("Part 1: %d\n", sum)
+	fmt.Printf("Part 2: %d\n", sum)
 
 }
 
-func Day3(text string) {
-	fmt.Println("Running Day 3 Part 1\n------------")
-	part1(text)
-	fmt.Println("\nRunning Day 3 Part 2\n------------")
-	part2(text)
+func Day3(text string, part int) {
+	switch part {
+	case 0:
+		part1(text)
+		part2(text)
+	case 1:
+		part1(text)
+	case 2:
+		part2(text)
+	default:
+		log.Fatalf("Part %d not found", part)
+	}
 }
