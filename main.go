@@ -9,6 +9,7 @@ import (
 	"github.com/solarwolf-code/aoc2023/day1"
 	"github.com/solarwolf-code/aoc2023/day2"
 	"github.com/solarwolf-code/aoc2023/day3"
+	"github.com/solarwolf-code/aoc2023/day4"
 )
 
 func readInput(filename string) string {
@@ -39,6 +40,8 @@ func main() {
 		day2.Day2(content)
 	case 3:
 		day3.Day3(content)
+	case 4:
+		day4.Day4(content)
 	default:
 		log.Fatalf("Day %d not found!", daySelected)
 	}
