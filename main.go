@@ -10,6 +10,7 @@ import (
 	"github.com/solarwolf-code/aoc2023/day2"
 	"github.com/solarwolf-code/aoc2023/day3"
 	"github.com/solarwolf-code/aoc2023/day4"
+	"github.com/solarwolf-code/aoc2023/day5"
 )
 
 func readInput(filename string) string {
@@ -37,6 +38,8 @@ func main() {
 		day3.Day3(content, *partSelected)
 	case 4:
 		day4.Day4(content, *partSelected)
+	case 5:
+		day5.Day5(content, *partSelected)
 	default:
 		log.Fatalf("Day %d not found!", *daySelected)
 	}
